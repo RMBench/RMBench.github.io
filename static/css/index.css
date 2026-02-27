@@ -1,0 +1,184 @@
+
+.highlighted-text {
+    color: #1c70c0;
+    font-weight: bold;
+    background: linear-gradient(to right, #1c70c0, #77e6dc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    padding-right: 7px; /* 添加右侧内边距，避免裁剪 */
+    line-height: 1.2; /* 调整行高 */
+}
+
+
+.title.is-1 {
+  width: 130%; /* 或者您可以设置一个更大的百分比 */
+  font-size: 3.4rem;
+  margin: 0 auto;
+  margin-left: -15%;  /* 通过设置负的左边距来向左偏移 */
+}
+
+
+
+/* 设置 logos 容器 */
+.logos {
+  display: flex;
+  justify-content: center; /* 居中对齐 */
+  align-items: center;
+  gap: 20px; /* logo 之间的间距 */
+  margin-bottom: 20px;
+}
+
+/* 设置 logo 图片大小 */
+.logo {
+  max-height: 100px; /* 限制高度，保持比例缩放 */
+  width: auto; /* 宽度自动适配，保持比例 */
+  object-fit: contain; /* 确保图片不会变形 */
+}
+
+.logo-small {
+  max-height: 70px; /* 设置更小的高度，例如 80px */
+}
+
+
+/* 通用字体设置 */
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* 链接按钮样式 */
+.external-link.button.is-normal.is-rounded.is-dark {
+  padding: 30px; /* 调整按钮的内边距 */
+  font-size: 25px; /* 增加字体大小 */
+  border-radius: 50px; /* 圆角效果 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 40px; /* 图标大小 */
+}
+
+/* 图标的字体大小 */
+.icon i.ai-arxiv, .icon i.fas, .icon i.fab {
+  font-size: 40px;
+}
+
+/* 每行的标题样式 */
+.row_label {
+  width: 120px;  /* 固定宽度，确保文字部分占据相同空间 */
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;  /* 文字居中 */
+}
+
+/* 视频容器样式 */
+.video-wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6列，视频宽度相同 */
+  gap: 1px; /* 视频之间的间距 */
+  justify-items: center; /* 保证视频居中 */
+  margin-bottom: 1px; /* 每行的间距 */
+}
+
+.put_color {
+  width: 100%;  /* 宽度占据容器的100% */
+  max-width: 315px; /* 控制最大宽度 */
+  height: auto; /* 高度自适应 */
+  border-radius: 8px; /* 可选：圆角效果 */
+}
+
+.put_grapess {
+  width: 100%;  /* 视频宽度占满容器 */
+  max-width: 315px;  /* 设置最大宽度 */
+  height: 100%;  /* 视频高度占满容器 */
+  object-fit: contain;  /* 保持视频比例缩小，确保完整显示在容器内 */
+  transform: scale(122.25%);  /* 将视频缩小到50% */
+  object-position: center;  /* 显示视频的中心部分 */
+}
+
+
+
+/* 每个视频的宽度和高度 */
+.put_grapes {
+  width: 100%;  /* 宽度占据容器的100% */
+  max-width: 350px; /* 控制最大宽度 */
+  height: auto; /* 高度自适应 */
+  border-radius: 8px; /* 可选：圆角效果 */
+}
+
+/* 进度条样式 */
+.progress-container {
+  width: 80%;
+  max-width: 600px;
+  margin-top: 10px;
+}
+
+#progress-bar {
+  width: 100%;
+  cursor: pointer;
+}
+
+/* 分割线样式 */
+.section-divider {
+  border: none; /* 移除默认边框样式 */
+  border-top: 2px solid #ccc; /* 设置分割线为顶部实线 */
+  margin: 30px 0; /* 设置上下间距 */
+  width: 100%; /* 控制分割线宽度 */
+  margin-left: auto; /* 水平居中 */
+  margin-right: auto;
+}
+
+/* 图片和视频的样式 */
+.fig, .teaser video, .video-container video, img.teaser, img.arch, img.blobs {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.teaser {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 视频比例 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 强制缩小按钮内的文本 */
+.link-block a {
+  font-size: 20px !important;
+}
+
+/* 只缩小 <span> 里的文字 */
+.link-block a span {
+  font-size: 20px !important;
+}
+
+/* 确保 Bulma 按钮的默认样式不会干扰 */
+.button {
+  font-size: 20px !important;
+}
+
+/* 如果按钮整体太大，用 scale() 进一步缩小 */
+.link-block a {
+  transform: scale(0.9);
+}
+
+.button {
+  padding: 8px 22px !important;  /* 调整内边距，让按钮变小 */
+  height: auto !important;  /* 避免 Bulma 强制设定高度 */
+  line-height: 1 !important;  /* 确保文本不增加按钮高度 */
+}
